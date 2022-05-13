@@ -1,3 +1,3 @@
 FROM pandoc/latex
 
-RUN tlmgr install glossaries
+RUN tlmgr install glossaries mfirstuc
