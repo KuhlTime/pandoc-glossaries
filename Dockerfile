@@ -1,7 +1,7 @@
 FROM pandoc/latex
 
-RUN sudo apt update -y
-RUN sudo apt install -y python3 python3-pip
+RUN apt update -y
+RUN apt install -y python3 python3-pip
 
 RUN pip install pandoc-fignos
 
