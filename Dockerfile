@@ -1,9 +1,8 @@
-FROM pandoc/latex
+FROM pandoc/latex:latest-ubuntu
 
 # Install python/pip
-ENV PYTHONUNBUFFERED=1
-RUN apk add --update --no-cache python3 alpine-sdk && ln -sf python3 /usr/bin/python
-RUN python3 -m ensurepip
-RUN pip3 install --no-cache --upgrade pandoc-fignos
+RUN apt update
+RUN apt install python3 python3-pip
+RUN pip3 install pandoc-fignos
 
 RUN tlmgr install glossaries mfirstuc textcase xfor datatool tracklang pgfplots
